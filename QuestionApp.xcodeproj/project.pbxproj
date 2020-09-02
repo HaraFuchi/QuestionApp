@@ -48,7 +48,6 @@
 				19B4ADD2F3C978B35DDFE576 /* Pods-QuestionApp.debug.xcconfig */,
 				5D9B485068FDF2A63CDB69AB /* Pods-QuestionApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -58,6 +57,33 @@
 				F42C41B5328264FBA34588C0 /* Pods_QuestionApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E30EE1AA24FF5204002FE2A1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E3396A3224F8E3140020AF8E /* AppDelegate.swift */,
+				E3396A3424F8E3140020AF8E /* SceneDelegate.swift */,
+				E3396A3624F8E3140020AF8E /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E30EE1AB24FF5214002FE2A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E3396A3824F8E3140020AF8E /* Main.storyboard */,
+				E3396A3B24F8E31A0020AF8E /* Assets.xcassets */,
+				E3396A3D24F8E31A0020AF8E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E30EE1AC24FF521E002FE2A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E3396A2624F8E3140020AF8E = {
@@ -81,12 +107,9 @@
 		E3396A3124F8E3140020AF8E /* QuestionApp */ = {
 			isa = PBXGroup;
 			children = (
-				E3396A3224F8E3140020AF8E /* AppDelegate.swift */,
-				E3396A3424F8E3140020AF8E /* SceneDelegate.swift */,
-				E3396A3624F8E3140020AF8E /* ViewController.swift */,
-				E3396A3824F8E3140020AF8E /* Main.storyboard */,
-				E3396A3B24F8E31A0020AF8E /* Assets.xcassets */,
-				E3396A3D24F8E31A0020AF8E /* LaunchScreen.storyboard */,
+				E30EE1AC24FF521E002FE2A1 /* Model */,
+				E30EE1AB24FF5214002FE2A1 /* View */,
+				E30EE1AA24FF5204002FE2A1 /* Controller */,
 				E3396A4024F8E31A0020AF8E /* Info.plist */,
 			);
 			path = QuestionApp;
