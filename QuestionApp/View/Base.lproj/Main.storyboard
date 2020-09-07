@@ -49,7 +49,7 @@
         <!--新規アカウント作成-->
         <scene sceneID="L1h-lq-qWl">
             <objects>
-                <viewController id="Iw4-yz-ATg" sceneMemberID="viewController">
+                <viewController id="Iw4-yz-ATg" customClass="CreateNewAccountViewController" customModule="QuestionApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HK2-LD-QLg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
