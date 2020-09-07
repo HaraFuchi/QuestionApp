@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qi9-uE-QT2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -29,15 +29,19 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="あとで登録する"/>
+                                <connections>
+                                    <segue destination="9dO-V6-GZz" kind="show" id="Ztv-HQ-leH"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.56274946400000003" green="0.72341571739999999" blue="0.79407795400000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eyA-qh-Z5A"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+            <point key="canvasLocation" x="858" y="126"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="sUZ-fO-JOc">
@@ -49,10 +53,29 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="NQp-wY-ruh"/>
                     </view>
+                    <navigationItem key="navigationItem" id="a5b-vM-gYk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcS-Cr-Uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="896" y="407"/>
+            <point key="canvasLocation" x="1680" y="409"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pzo-xP-mde">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qi9-uE-QT2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KJP-am-N4P">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h0M-Sr-eLg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7eC-CH-X46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
         </scene>
     </scenes>
 </document>
