@@ -23,6 +23,9 @@
                                 <state key="normal" title="新規ユーザー登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Iw4-yz-ATg" kind="show" id="yDH-EM-cgo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-RN-JO0">
                                 <rect key="frame" x="31" y="453" width="352" height="42"/>
@@ -42,6 +45,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="858" y="126"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="L1h-lq-qWl">
+            <objects>
+                <viewController id="Iw4-yz-ATg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HK2-LD-QLg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="PjA-UB-Nkl"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0pO-5b-dso"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-5S-m8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="-263"/>
         </scene>
         <!--質問内容-->
         <scene sceneID="sUZ-fO-JOc">
