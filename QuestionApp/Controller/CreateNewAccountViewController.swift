@@ -28,7 +28,10 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         tableView.dataSource = self
         let categoryNib = UINib(nibName: "CategoryLabelAndTFTableViewCell", bundle: nil)
+        let commonActionButtonNib = UINib(nibName: "CommonActionButtonTableViewCell", bundle: nil)
         tableView.register(categoryNib, forCellReuseIdentifier: "CategoryCell")
+        tableView.register(commonActionButtonNib, forCellReuseIdentifier: "CommonActionButtonCell")
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -37,6 +40,7 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let categoryCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryLabelAndTFTableViewCell
+        let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath)
         
         switch indexPath.row {
         case 0:
@@ -49,6 +53,8 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
             categoryCell.categoryTextField.placeholder = CategoryList.email.CategoryPlaceHolderList
             categoryCell.indexNumber = indexPath.row
             return categoryCell
+        case 2:
+            return commonActionButtonCell
         default: break
         }
         return UITableViewCell()
