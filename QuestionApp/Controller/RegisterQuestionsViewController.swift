@@ -8,9 +8,15 @@
 
 import UIKit
 
-class RegisterQuestionsViewController: UIViewController, UITableViewDataSource {
+class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, UINavigationBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    
+    //UINavigationBarをステータスバーまで広げる
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
     
     enum QuestionList: String, CaseIterable{
         case person = "質問する相手"
@@ -31,6 +37,7 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        navigationBar.delegate = self
         let questionTextViewNib = UINib(nibName: "LabelAndTextViewTableViewCell", bundle: nil)
         let datePickerNib = UINib(nibName: "LabelAndDatePickerTableViewCell", bundle: nil)
         tableView.register(questionTextViewNib, forCellReuseIdentifier: "LabelAndTextViewCell")
