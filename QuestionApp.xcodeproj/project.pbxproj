@@ -12,6 +12,8 @@
 		E30FEB41250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */; };
 		E30FEB42250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */; };
 		E30FEB4425067A0100B2F45B /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */; };
+		E30FEB47250F24E300B2F45B /* CommonActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */; };
+		E30FEB48250F24E300B2F45B /* CommonActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */; };
 		E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3224F8E3140020AF8E /* AppDelegate.swift */; };
 		E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3424F8E3140020AF8E /* SceneDelegate.swift */; };
 		E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3624F8E3140020AF8E /* SignUpWaysViewController.swift */; };
@@ -27,6 +29,8 @@
 		E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabelAndTFTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryLabelAndTFTableViewCell.xib; sourceTree = "<group>"; };
 		E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
+		E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActionButtonTableViewCell.swift; sourceTree = "<group>"; };
+		E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonActionButtonTableViewCell.xib; sourceTree = "<group>"; };
 		E3396A2F24F8E3140020AF8E /* QuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3396A3224F8E3140020AF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3396A3424F8E3140020AF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 			children = (
 				E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */,
 				E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */,
+				E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */,
+				E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 				E3396A3F24F8E31A0020AF8E /* LaunchScreen.storyboard in Resources */,
 				E3396A3C24F8E31A0020AF8E /* Assets.xcassets in Resources */,
 				E30FEB42250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib in Resources */,
+				E30FEB48250F24E300B2F45B /* CommonActionButtonTableViewCell.xib in Resources */,
 				E3396A3A24F8E3140020AF8E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +242,7 @@
 			files = (
 				E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */,
 				E30FEB4425067A0100B2F45B /* CreateNewAccountViewController.swift in Sources */,
+				E30FEB47250F24E300B2F45B /* CommonActionButtonTableViewCell.swift in Sources */,
 				E30FEB41250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift in Sources */,
 				E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */,
 				E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */,
