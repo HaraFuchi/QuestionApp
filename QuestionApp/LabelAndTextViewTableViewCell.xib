@@ -16,22 +16,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="451" height="154"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-FH-g9X">
-                        <rect key="frame" x="28" y="10" width="210" height="21"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-FH-g9X">
+                        <rect key="frame" x="8" y="8" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xM9-hU-Fm4">
-                        <rect key="frame" x="28" y="39" width="413" height="106"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xM9-hU-Fm4">
+                        <rect key="frame" x="8" y="33" width="435" height="109"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="ajk-FH-g9X" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2sA-pI-XNE"/>
+                    <constraint firstItem="xM9-hU-Fm4" firstAttribute="top" secondItem="ajk-FH-g9X" secondAttribute="bottom" constant="4" id="HhY-Tc-Rpm"/>
+                    <constraint firstAttribute="trailing" secondItem="xM9-hU-Fm4" secondAttribute="trailing" constant="8" id="bFV-Z6-YFA"/>
+                    <constraint firstItem="ajk-FH-g9X" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="guC-fH-ekR"/>
+                    <constraint firstItem="xM9-hU-Fm4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jZ5-me-bLt"/>
+                    <constraint firstAttribute="bottom" secondItem="xM9-hU-Fm4" secondAttribute="bottom" constant="12" id="pu2-68-WHd"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
