@@ -74,6 +74,9 @@
                         <viewLayoutGuide key="safeArea" id="PjA-UB-Nkl"/>
                     </view>
                     <navigationItem key="navigationItem" title="新規アカウント作成" id="0pO-5b-dso"/>
+                    <connections>
+                        <outlet property="tableView" destination="PxI-nb-3pD" id="foV-HH-C8x"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-5S-m8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

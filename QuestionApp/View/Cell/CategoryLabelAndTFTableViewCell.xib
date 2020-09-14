@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GLy-KO-rQ9">
-                                <rect key="frame" x="8" y="8" width="77" height="20"/>
+                                <rect key="frame" x="8" y="8" width="233" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -39,6 +39,10 @@
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryLabel" destination="GLy-KO-rQ9" id="tgC-rH-2J3"/>
+                <outlet property="categoryTextField" destination="w4T-LB-rgD" id="lWC-zr-hfy"/>
+            </connections>
             <point key="canvasLocation" x="116.66666666666667" y="145.98214285714286"/>
         </tableViewCell>
     </objects>

@@ -8,23 +8,49 @@
 
 import UIKit
 
-class CreateNewAccountViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    enum CategoryList: String, CaseIterable {
+        case userName = "ユーザーネーム"
+        case email = "メールアドレス"
+        
+        var CategoryPlaceHolderList: String{
+            switch self {
+            case .userName: return "アプリ内で使用する名前"
+            case .email: return "メールアドレス"
+            }
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.dataSource = self
+        let categoryNib = UINib(nibName: "CategoryLabelAndTFTableViewCell", bundle: nil)
+        tableView.register(categoryNib, forCellReuseIdentifier: "CategoryCell")
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        CategoryList.allCases.count + 1 //1は登録ボタンの分
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryLabelAndTFTableViewCell
+        
+        switch indexPath.row {
+        case 0:
+            categoryCell.categoryLabel.text = CategoryList.userName.rawValue
+            categoryCell.categoryTextField.placeholder = CategoryList.userName.CategoryPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
+            return categoryCell
+        case 1:
+            categoryCell.categoryLabel.text = CategoryList.email.rawValue
+            categoryCell.categoryTextField.placeholder = CategoryList.email.CategoryPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
+            return categoryCell
+        default: break
+        }
+        return UITableViewCell()
+    }
 }
