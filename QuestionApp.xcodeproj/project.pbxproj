@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4CD42DD5ABF620D508BB08AA /* Pods_QuestionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42C41B5328264FBA34588C0 /* Pods_QuestionApp.framework */; };
 		E30FEB3825064FCB00B2F45B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB3725064FCB00B2F45B /* HomeViewController.swift */; };
+		E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */; };
 		E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3224F8E3140020AF8E /* AppDelegate.swift */; };
 		E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3424F8E3140020AF8E /* SceneDelegate.swift */; };
 		E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3624F8E3140020AF8E /* SignUpWaysViewController.swift */; };
@@ -21,6 +22,7 @@
 		19B4ADD2F3C978B35DDFE576 /* Pods-QuestionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionApp.debug.xcconfig"; path = "Target Support Files/Pods-QuestionApp/Pods-QuestionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5D9B485068FDF2A63CDB69AB /* Pods-QuestionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionApp.release.xcconfig"; path = "Target Support Files/Pods-QuestionApp/Pods-QuestionApp.release.xcconfig"; sourceTree = "<group>"; };
 		E30FEB3725064FCB00B2F45B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQuestionsViewController.swift; sourceTree = "<group>"; };
 		E3396A2F24F8E3140020AF8E /* QuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3396A3224F8E3140020AF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3396A3424F8E3140020AF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				E3396A3424F8E3140020AF8E /* SceneDelegate.swift */,
 				E3396A3624F8E3140020AF8E /* SignUpWaysViewController.swift */,
 				E30FEB3725064FCB00B2F45B /* HomeViewController.swift */,
+				E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */,
 				E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */,
 				E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */,
+				E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */,
 				E30FEB3825064FCB00B2F45B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
