@@ -9,6 +9,9 @@
 import UIKit
 
 class CommonActionButtonTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var rightSideButton: UIButton!
+    @IBOutlet weak var leftSideButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,5 +21,4 @@ class CommonActionButtonTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

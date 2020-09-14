@@ -40,7 +40,7 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let categoryCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryLabelAndTFTableViewCell
-        let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath)
+        let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath) as! CommonActionButtonTableViewCell
         
         switch indexPath.row {
         case 0:
@@ -54,6 +54,8 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
             categoryCell.indexNumber = indexPath.row
             return categoryCell
         case 2:
+            commonActionButtonCell.rightSideButton.setTitle("アカウントを作成", for: .normal)
+            commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
             return commonActionButtonCell
         default: break
         }
