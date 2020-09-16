@@ -31,6 +31,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return sectionTitles[section]
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
     }
