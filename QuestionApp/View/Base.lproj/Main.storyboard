@@ -115,6 +115,9 @@
                         <viewLayoutGuide key="safeArea" id="NQp-wY-ruh"/>
                     </view>
                     <navigationItem key="navigationItem" title="質問内容" id="a5b-vM-gYk"/>
+                    <connections>
+                        <outlet property="tableView" destination="CDq-SA-Euz" id="bNw-Ft-HE2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcS-Cr-Uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
