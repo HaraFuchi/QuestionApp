@@ -37,6 +37,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let homeQuestionCell = tableView.dequeueReusableCell(withIdentifier: "HomeQuestionCell", for: indexPath) as! HomeQuestionTableViewCell
+        homeQuestionCell.questionTextView.isEditable = false
         return homeQuestionCell
     }
 }
