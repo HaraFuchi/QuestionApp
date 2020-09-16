@@ -20,6 +20,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         let homeQuestionNib = UINib(nibName: "HomeQuestionTableViewCell", bundle: nil)
         tableView.register(homeQuestionNib, forCellReuseIdentifier: "HomeQuestionCell")
+        self.navigationItem.hidesBackButton = true
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
