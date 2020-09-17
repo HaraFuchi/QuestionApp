@@ -46,7 +46,6 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         tableView.register(questionTextViewNib, forCellReuseIdentifier: "LabelAndTextViewCell")
         tableView.register(datePickerNib, forCellReuseIdentifier: "LabelAndDatePickerCell")
         tableView.register(commonActionButtonNib, forCellReuseIdentifier: "CommonActionButtonCell")
-        //このブランチをマージした後にカスタムセルのCategoryLabelAndTFTableviewCellとCommonActionButtonTableViewCellを追加
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -63,8 +62,7 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         case 0:
             categoryCell.categoryLabel.text = QuestionList.person.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.person.QuestionPlaceHolderList
-            //placeholder
-            return categoryCell //後からCategoryCellに修正(Label&TF)
+            return categoryCell
         case 1:
             questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
             questionTextViewCell.categoryTextView.text = "" //TextViewという文字が入るため
@@ -75,13 +73,12 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         case 3:
             categoryCell.categoryLabel.text = QuestionList.nextAction.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.nextAction.QuestionPlaceHolderList
-            //placeHolder
-            return categoryCell //後からCategoryCellに修正(Label&TF)
+            return categoryCell 
         case 4:
             commonActionButtonCell.delegate = self
             commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
             commonActionButtonCell.rightSideButton.setTitle("質問を登録", for: .normal)
-            return commonActionButtonCell //後からCommonActionButtonCellに修正(Button)
+            return commonActionButtonCell
         default: break
         }
         return UITableViewCell()
