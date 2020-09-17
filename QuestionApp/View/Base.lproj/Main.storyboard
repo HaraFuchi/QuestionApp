@@ -23,6 +23,9 @@
                                 <state key="normal" title="新規ユーザー登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Iw4-yz-ATg" kind="show" id="yDH-EM-cgo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-RN-JO0">
                                 <rect key="frame" x="31" y="453" width="352" height="42"/>
@@ -42,6 +45,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="858" y="126"/>
+        </scene>
+        <!--新規アカウント作成-->
+        <scene sceneID="L1h-lq-qWl">
+            <objects>
+                <viewController id="Iw4-yz-ATg" customClass="CreateNewAccountViewController" customModule="QuestionApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HK2-LD-QLg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-nb-3pD">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="CNb-3r-S7j">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="91"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CNb-3r-S7j" id="C9k-kV-Z9O">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PxI-nb-3pD" firstAttribute="bottom" secondItem="PjA-UB-Nkl" secondAttribute="bottom" id="lzk-Xa-pRo"/>
+                            <constraint firstItem="PxI-nb-3pD" firstAttribute="leading" secondItem="PjA-UB-Nkl" secondAttribute="leading" id="sZx-NA-VJ1"/>
+                            <constraint firstItem="PxI-nb-3pD" firstAttribute="trailing" secondItem="PjA-UB-Nkl" secondAttribute="trailing" id="tkz-u5-lRd"/>
+                            <constraint firstItem="PxI-nb-3pD" firstAttribute="top" secondItem="PjA-UB-Nkl" secondAttribute="top" id="wyp-Uw-1Cm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PjA-UB-Nkl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="新規アカウント作成" id="0pO-5b-dso"/>
+                    <connections>
+                        <outlet property="tableView" destination="PxI-nb-3pD" id="foV-HH-C8x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-5S-m8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679.7101449275362" y="-263.16964285714283"/>
         </scene>
         <!--質問内容-->
         <scene sceneID="sUZ-fO-JOc">
