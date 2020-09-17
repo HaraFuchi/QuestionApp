@@ -38,10 +38,14 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         super.viewDidLoad()
         tableView.dataSource = self
         navigationBar.delegate = self
+        let categoryNib = UINib(nibName: "CategoryLabelAndTFTableViewCell", bundle: nil)
         let questionTextViewNib = UINib(nibName: "LabelAndTextViewTableViewCell", bundle: nil)
         let datePickerNib = UINib(nibName: "LabelAndDatePickerTableViewCell", bundle: nil)
+        let commonActionButtonNib = UINib(nibName: "CommonActionButtonTableViewCell", bundle: nil)
+        tableView.register(categoryNib, forCellReuseIdentifier: "CategoryCell")
         tableView.register(questionTextViewNib, forCellReuseIdentifier: "LabelAndTextViewCell")
         tableView.register(datePickerNib, forCellReuseIdentifier: "LabelAndDatePickerCell")
+        tableView.register(commonActionButtonNib, forCellReuseIdentifier: "CommonActionButtonCell")
         //このブランチをマージした後にカスタムセルのCategoryLabelAndTFTableviewCellとCommonActionButtonTableViewCellを追加
     }
     
@@ -50,26 +54,33 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let categoryCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryLabelAndTFTableViewCell
         let questionTextViewCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndTextViewCell", for: indexPath) as! LabelAndTextViewTableViewCell
         let datePickerCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndDatePickerCell", for: indexPath) as! LabelAndDatePickerTableViewCell
+        let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath) as! CommonActionButtonTableViewCell
         
         switch indexPath.row {
         case 0:
-            questionTextViewCell.categoryLabel.text = QuestionList.person.rawValue
+            categoryCell.categoryLabel.text = QuestionList.person.rawValue
+            categoryCell.categoryTextField.placeholder = QuestionList.person.QuestionPlaceHolderList
             //placeholder
-            return questionTextViewCell //後からCategoryCellに修正(Label&TF)
+            return categoryCell //後からCategoryCellに修正(Label&TF)
         case 1:
-            questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
-            return questionTextViewCell
+            categoryCell.categoryLabel.text = QuestionList.question.rawValue
+            categoryCell.categoryTextField.placeholder = QuestionList.question.QuestionPlaceHolderList
+            return categoryCell
         case 2:
             datePickerCell.categoryLabel.text = QuestionList.date.rawValue
             return datePickerCell
         case 3:
-            questionTextViewCell.categoryLabel.text = QuestionList.nextAction.rawValue
+            categoryCell.categoryLabel.text = QuestionList.nextAction.rawValue
+            categoryCell.categoryTextField.placeholder = QuestionList.nextAction.QuestionPlaceHolderList
             //placeHolder
-            return questionTextViewCell //後からCategoryCellに修正(Label&TF)
+            return categoryCell //後からCategoryCellに修正(Label&TF)
         case 4:
-            return UITableViewCell() //後からCommonActionButtonCellに修正(Button)
+            commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
+            commonActionButtonCell.rightSideButton.setTitle("質問を登録", for: .normal)
+            return commonActionButtonCell //後からCommonActionButtonCellに修正(Button)
         default: break
         }
         return UITableViewCell()
