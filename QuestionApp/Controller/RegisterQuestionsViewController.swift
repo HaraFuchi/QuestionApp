@@ -78,11 +78,21 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
             //placeHolder
             return categoryCell //後からCategoryCellに修正(Label&TF)
         case 4:
+            commonActionButtonCell.delegate = self
             commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
             commonActionButtonCell.rightSideButton.setTitle("質問を登録", for: .normal)
             return commonActionButtonCell //後からCommonActionButtonCellに修正(Button)
         default: break
         }
         return UITableViewCell()
+    }
+}
+
+//MARK: - Protocol
+extension RegisterQuestionsViewController: CommonActionButtonTableViewCellDelegate {
+    func cancelButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    func registerQuestionsButton() {
     }
 }

@@ -28,6 +28,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapLeftSideButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e5B-eC-kg4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekp-nW-uJQ">
                                         <rect key="frame" x="202.5" y="0.0" width="189.5" height="64"/>
@@ -35,6 +38,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapRightSideButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="NUV-2e-it7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
