@@ -66,9 +66,9 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
             //placeholder
             return categoryCell //後からCategoryCellに修正(Label&TF)
         case 1:
-            categoryCell.categoryLabel.text = QuestionList.question.rawValue
-            categoryCell.categoryTextField.placeholder = QuestionList.question.QuestionPlaceHolderList
-            return categoryCell
+            questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
+            questionTextViewCell.categoryTextView.text = "" //TextViewという文字が入るため
+            return questionTextViewCell
         case 2:
             datePickerCell.categoryLabel.text = QuestionList.date.rawValue
             return datePickerCell
