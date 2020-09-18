@@ -49,7 +49,7 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 //マジックナンバーは使わないようあとで修正
+        return QuestionList.allCases.count + 1 //1は登録ボタン(CommonActionButtonTableViewCell)の分
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
