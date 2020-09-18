@@ -9,16 +9,16 @@
 /* Begin PBXBuildFile section */
 		4CD42DD5ABF620D508BB08AA /* Pods_QuestionApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F42C41B5328264FBA34588C0 /* Pods_QuestionApp.framework */; };
 		E30FEB3825064FCB00B2F45B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB3725064FCB00B2F45B /* HomeViewController.swift */; };
-		E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */; };
-		E30FEB4D250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */; };
-		E30FEB4E250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */; };
-		E30FEB51250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */; };
-		E30FEB52250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */; };
 		E30FEB41250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */; };
 		E30FEB42250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */; };
 		E30FEB4425067A0100B2F45B /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */; };
 		E30FEB47250F24E300B2F45B /* CommonActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */; };
 		E30FEB48250F24E300B2F45B /* CommonActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */; };
+		E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */; };
+		E30FEB4D250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */; };
+		E30FEB4E250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */; };
+		E30FEB51250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */; };
+		E30FEB52250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */; };
 		E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3224F8E3140020AF8E /* AppDelegate.swift */; };
 		E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3424F8E3140020AF8E /* SceneDelegate.swift */; };
 		E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3624F8E3140020AF8E /* SignUpWaysViewController.swift */; };
@@ -31,16 +31,16 @@
 		19B4ADD2F3C978B35DDFE576 /* Pods-QuestionApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionApp.debug.xcconfig"; path = "Target Support Files/Pods-QuestionApp/Pods-QuestionApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5D9B485068FDF2A63CDB69AB /* Pods-QuestionApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionApp.release.xcconfig"; path = "Target Support Files/Pods-QuestionApp/Pods-QuestionApp.release.xcconfig"; sourceTree = "<group>"; };
 		E30FEB3725064FCB00B2F45B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQuestionsViewController.swift; sourceTree = "<group>"; };
-		E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextViewTableViewCell.swift; sourceTree = "<group>"; };
-		E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextViewTableViewCell.xib; sourceTree = "<group>"; };
-		E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndDatePickerTableViewCell.swift; sourceTree = "<group>"; };
-		E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndDatePickerTableViewCell.xib; sourceTree = "<group>"; };
 		E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabelAndTFTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryLabelAndTFTableViewCell.xib; sourceTree = "<group>"; };
 		E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
 		E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActionButtonTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonActionButtonTableViewCell.xib; sourceTree = "<group>"; };
+		E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQuestionsViewController.swift; sourceTree = "<group>"; };
+		E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextViewTableViewCell.swift; sourceTree = "<group>"; };
+		E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextViewTableViewCell.xib; sourceTree = "<group>"; };
+		E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndDatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndDatePickerTableViewCell.xib; sourceTree = "<group>"; };
 		E3396A2F24F8E3140020AF8E /* QuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3396A3224F8E3140020AF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3396A3424F8E3140020AF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +117,10 @@
 			children = (
 				E30FEB3F250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.swift */,
 				E30FEB40250677EC00B2F45B /* CategoryLabelAndTFTableViewCell.xib */,
+				E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */,
+				E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */,
+				E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */,
+				E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */,
 				E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */,
 				E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */,
 			);
@@ -148,10 +152,6 @@
 				E30EE1AB24FF5214002FE2A1 /* View */,
 				E30EE1AA24FF5204002FE2A1 /* Controller */,
 				E3396A4024F8E31A0020AF8E /* Info.plist */,
-				E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */,
-				E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */,
-				E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */,
-				E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */,
 			);
 			path = QuestionApp;
 			sourceTree = "<group>";
