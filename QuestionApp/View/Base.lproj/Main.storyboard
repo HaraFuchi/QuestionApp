@@ -119,7 +119,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NQp-wY-ruh"/>
                     </view>
-                    <navigationItem key="navigationItem" title="質問内容" id="a5b-vM-gYk"/>
+                    <navigationItem key="navigationItem" title="質問内容" id="a5b-vM-gYk">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="clC-yL-n3b">
+                            <connections>
+                                <segue destination="XVx-yr-yoH" kind="presentation" modalPresentationStyle="fullScreen" id="ezC-7B-5xc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="CDq-SA-Euz" id="bNw-Ft-HE2"/>
                     </connections>
