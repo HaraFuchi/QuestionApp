@@ -27,6 +27,7 @@
 		E3396A3A24F8E3140020AF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3396A3824F8E3140020AF8E /* Main.storyboard */; };
 		E3396A3C24F8E31A0020AF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3396A3B24F8E31A0020AF8E /* Assets.xcassets */; };
 		E3396A3F24F8E31A0020AF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3396A3D24F8E31A0020AF8E /* LaunchScreen.storyboard */; };
+		E3431832251F139D0060B9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3431831251F139D0060B9EE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		E3396A3B24F8E31A0020AF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3396A3E24F8E31A0020AF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3396A4024F8E31A0020AF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3431831251F139D0060B9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F42C41B5328264FBA34588C0 /* Pods_QuestionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -158,6 +160,7 @@
 				E30EE1AB24FF5214002FE2A1 /* View */,
 				E30EE1AA24FF5204002FE2A1 /* Controller */,
 				E3396A4024F8E31A0020AF8E /* Info.plist */,
+				E3431831251F139D0060B9EE /* GoogleService-Info.plist */,
 			);
 			path = QuestionApp;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E30FEB5625120C2700B2F45B /* HomeQuestionTableViewCell.xib in Resources */,
+				E3431832251F139D0060B9EE /* GoogleService-Info.plist in Resources */,
 				E30FEB52250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib in Resources */,
 				E30FEB4E250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib in Resources */,
 				E3396A3F24F8E31A0020AF8E /* LaunchScreen.storyboard in Resources */,
