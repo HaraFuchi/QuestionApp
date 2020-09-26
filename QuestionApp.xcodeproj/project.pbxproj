@@ -14,13 +14,13 @@
 		E30FEB4425067A0100B2F45B /* CreateNewAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */; };
 		E30FEB47250F24E300B2F45B /* CommonActionButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */; };
 		E30FEB48250F24E300B2F45B /* CommonActionButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */; };
-		E30FEB5525120C2700B2F45B /* HomeQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB5325120C2700B2F45B /* HomeQuestionTableViewCell.swift */; };
-		E30FEB5625120C2700B2F45B /* HomeQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB5425120C2700B2F45B /* HomeQuestionTableViewCell.xib */; };
 		E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */; };
 		E30FEB4D250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */; };
 		E30FEB4E250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */; };
 		E30FEB51250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */; };
 		E30FEB52250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */; };
+		E30FEB5525120C2700B2F45B /* HomeQuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30FEB5325120C2700B2F45B /* HomeQuestionTableViewCell.swift */; };
+		E30FEB5625120C2700B2F45B /* HomeQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E30FEB5425120C2700B2F45B /* HomeQuestionTableViewCell.xib */; };
 		E3396A3324F8E3140020AF8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3224F8E3140020AF8E /* AppDelegate.swift */; };
 		E3396A3524F8E3140020AF8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3424F8E3140020AF8E /* SceneDelegate.swift */; };
 		E3396A3724F8E3140020AF8E /* SignUpWaysViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3396A3624F8E3140020AF8E /* SignUpWaysViewController.swift */; };
@@ -38,13 +38,13 @@
 		E30FEB4325067A0100B2F45B /* CreateNewAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewAccountViewController.swift; sourceTree = "<group>"; };
 		E30FEB45250F24E200B2F45B /* CommonActionButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonActionButtonTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB46250F24E200B2F45B /* CommonActionButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommonActionButtonTableViewCell.xib; sourceTree = "<group>"; };
-		E30FEB5325120C2700B2F45B /* HomeQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuestionTableViewCell.swift; sourceTree = "<group>"; };
-		E30FEB5425120C2700B2F45B /* HomeQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		E30FEB49250F386100B2F45B /* RegisterQuestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterQuestionsViewController.swift; sourceTree = "<group>"; };
 		E30FEB4B250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndTextViewTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB4C250F3ACC00B2F45B /* LabelAndTextViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndTextViewTableViewCell.xib; sourceTree = "<group>"; };
 		E30FEB4F250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelAndDatePickerTableViewCell.swift; sourceTree = "<group>"; };
 		E30FEB50250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelAndDatePickerTableViewCell.xib; sourceTree = "<group>"; };
+		E30FEB5325120C2700B2F45B /* HomeQuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeQuestionTableViewCell.swift; sourceTree = "<group>"; };
+		E30FEB5425120C2700B2F45B /* HomeQuestionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeQuestionTableViewCell.xib; sourceTree = "<group>"; };
 		E3396A2F24F8E3140020AF8E /* QuestionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3396A3224F8E3140020AF8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3396A3424F8E3140020AF8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -426,7 +426,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hara.QuestionApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harafuchi.QuestionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -445,7 +445,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.hara.QuestionApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.harafuchi.QuestionApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
