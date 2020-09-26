@@ -7,4 +7,6 @@ target 'QuestionApp' do
 
   # Pods for QuestionApp
 
+pod 'Firebase/Analytics'
+
 end
