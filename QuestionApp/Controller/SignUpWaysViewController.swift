@@ -9,9 +9,17 @@
 import UIKit
 
 class SignUpWaysViewController: UIViewController {
+    
+    let anonymousLoginModel = AnonymousLoginModel()
 
+    @IBOutlet weak var anonymousSignUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func didTapAnonymousSignUpButton(_ sender: UIButton) {
+        anonymousLoginModel.anonymousLogin()
     }
 }
 

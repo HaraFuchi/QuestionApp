@@ -33,6 +33,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="あとで登録する"/>
                                 <connections>
+                                    <action selector="didTapAnonymousSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0T-ld-UNk"/>
                                     <segue destination="9dO-V6-GZz" kind="show" id="Ztv-HQ-leH"/>
                                 </connections>
                             </button>
@@ -41,6 +42,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="eyA-qh-Z5A"/>
+                    <connections>
+                        <outlet property="anonymousSignUpButton" destination="m1L-RN-JO0" id="cRY-dq-G7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
