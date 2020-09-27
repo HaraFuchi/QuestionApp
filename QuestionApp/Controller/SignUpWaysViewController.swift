@@ -21,8 +21,11 @@ class SignUpWaysViewController: UIViewController {
     
     @IBAction func didTapAnonymousSignUpButton(_ sender: UIButton) {
         anonymousLoginModel.anonymousLogin()
-        if let _ = Auth.auth().currentUser {
-            dismiss(animated: true, completion: nil)
+        //ユーザーのログイン状況に変更が加わった際に実行されるメソッド
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if let _ = user {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
 }
