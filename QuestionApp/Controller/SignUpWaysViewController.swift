@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import Firebase
 
 class SignUpWaysViewController: UIViewController {
     
     let anonymousLoginModel = AnonymousLoginModel()
-
+    
     @IBOutlet weak var anonymousSignUpButton: UIButton!
     
     override func viewDidLoad() {
@@ -20,6 +21,9 @@ class SignUpWaysViewController: UIViewController {
     
     @IBAction func didTapAnonymousSignUpButton(_ sender: UIButton) {
         anonymousLoginModel.anonymousLogin()
+        if let _ = Auth.auth().currentUser {
+            dismiss(animated: true, completion: nil)
+        }
     }
 }
 

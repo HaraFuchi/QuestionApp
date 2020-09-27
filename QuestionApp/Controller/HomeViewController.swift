@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -21,6 +22,12 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         let homeQuestionNib = UINib(nibName: "HomeQuestionTableViewCell", bundle: nil)
         tableView.register(homeQuestionNib, forCellReuseIdentifier: "HomeQuestionCell")
         self.navigationItem.hidesBackButton = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if Auth.auth().currentUser == nil {
+            performSegue(withIdentifier: "goToSignUpWaysVC", sender: nil)
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

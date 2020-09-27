@@ -54,11 +54,21 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
             categoryCell.indexNumber = indexPath.row
             return categoryCell
         case 2:
+            commonActionButtonCell.delegate = self
             commonActionButtonCell.rightSideButton.setTitle("アカウントを作成", for: .normal)
             commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
             return commonActionButtonCell
         default: break
         }
         return UITableViewCell()
+    }
+}
+
+//MARK: - Protocol
+extension CreateNewAccountViewController: CommonActionButtonTableViewCellDelegate {
+    func cancelButton() {
+        dismiss(animated: true, completion: nil)
+    }
+    func registerQuestionsButton() {
     }
 }
