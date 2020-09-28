@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qi9-uE-QT2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4jW-Ee-HfM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -24,7 +24,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iw4-yz-ATg" kind="show" id="yDH-EM-cgo"/>
+                                    <segue destination="Iw4-yz-ATg" kind="presentation" modalPresentationStyle="fullScreen" id="nwz-Kd-mzG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1L-RN-JO0">
@@ -33,7 +33,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <state key="normal" title="あとで登録する"/>
                                 <connections>
-                                    <segue destination="9dO-V6-GZz" kind="show" id="Ztv-HQ-leH"/>
+                                    <action selector="didTapAnonymousSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w0T-ld-UNk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -41,10 +41,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="eyA-qh-Z5A"/>
+                    <connections>
+                        <outlet property="anonymousSignUpButton" destination="m1L-RN-JO0" id="cRY-dq-G7J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="126"/>
+            <point key="canvasLocation" x="2596" y="-273"/>
         </scene>
         <!--新規アカウント作成-->
         <scene sceneID="L1h-lq-qWl">
@@ -55,7 +58,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PxI-nb-3pD">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="91" id="CNb-3r-S7j">
@@ -85,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-5S-m8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679.7101449275362" y="-263.16964285714283"/>
+            <point key="canvasLocation" x="3472" y="-273"/>
         </scene>
         <!--質問内容-->
         <scene sceneID="sUZ-fO-JOc">
@@ -128,11 +131,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="CDq-SA-Euz" id="bNw-Ft-HE2"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="goToSignUpWaysVC" modalPresentationStyle="fullScreen" id="tb9-mN-foJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GcS-Cr-Uxy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1679.7101449275362" y="408.48214285714283"/>
+            <point key="canvasLocation" x="1738" y="443"/>
         </scene>
         <!--Register Questions View Controller-->
         <scene sceneID="dGO-D1-KEF">
@@ -182,25 +186,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OxR-Sz-PIk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2492.753623188406" y="407.8125"/>
+            <point key="canvasLocation" x="2596" y="443"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="pzo-xP-mde">
+        <scene sceneID="WPc-xw-ZIU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qi9-uE-QT2" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4jW-Ee-HfM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KJP-am-N4P">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AT3-1t-S57">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="h0M-Sr-eLg"/>
+                        <segue destination="9dO-V6-GZz" kind="relationship" relationship="rootViewController" id="kls-5p-o3g"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7eC-CH-X46" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ixa-dz-2I6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="125.89285714285714"/>
+            <point key="canvasLocation" x="918.84057971014499" y="442.63392857142856"/>
         </scene>
     </scenes>
 </document>
