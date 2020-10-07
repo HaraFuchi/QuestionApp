@@ -18,6 +18,11 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         return .topAttached
     }
     
+    @IBAction func didTapScreenRecognizer(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
+    
     enum QuestionList: String, CaseIterable{
         case person = "質問する相手"
         case question = "質問内容"
