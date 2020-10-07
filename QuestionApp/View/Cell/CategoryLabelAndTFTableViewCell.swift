@@ -26,11 +26,11 @@ class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        categoryTextField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        categoryTextField.resignFirstResponder()
+        contentView.endEditing(true)
     }
 }
