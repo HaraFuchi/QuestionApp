@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LabelAndTextViewTableViewCell: UITableViewCell {
+class LabelAndTextViewTableViewCell: UITableViewCell, UITextViewDelegate {
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryTextView: UITextView!
@@ -16,11 +16,16 @@ class LabelAndTextViewTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        categoryTextView.delegate = self
         categoryTextViewDetail()
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        contentView.endEditing(true)
     }
 }
 
