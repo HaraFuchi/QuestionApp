@@ -76,12 +76,16 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PjA-UB-Nkl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="PxI-nb-3pD" firstAttribute="bottom" secondItem="PjA-UB-Nkl" secondAttribute="bottom" id="lzk-Xa-pRo"/>
                             <constraint firstItem="PxI-nb-3pD" firstAttribute="leading" secondItem="PjA-UB-Nkl" secondAttribute="leading" id="sZx-NA-VJ1"/>
                             <constraint firstItem="PxI-nb-3pD" firstAttribute="trailing" secondItem="PjA-UB-Nkl" secondAttribute="trailing" id="tkz-u5-lRd"/>
                             <constraint firstItem="PxI-nb-3pD" firstAttribute="top" secondItem="PjA-UB-Nkl" secondAttribute="top" id="wyp-Uw-1Cm"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="sHo-BV-Ze7" appends="YES" id="ALH-RM-2pw"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="新規アカウント作成" id="0pO-5b-dso"/>
                     <connections>
@@ -89,6 +93,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdg-5S-m8C" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="sHo-BV-Ze7">
+                    <connections>
+                        <action selector="didTapScreenRecognizer:" destination="Iw4-yz-ATg" id="i5u-7z-aAV"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3472" y="-273"/>
         </scene>

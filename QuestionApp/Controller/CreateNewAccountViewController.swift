@@ -12,6 +12,10 @@ class CreateNewAccountViewController: UIViewController, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func didTapScreenRecognizer(_ sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
+    
     enum CategoryList: String, CaseIterable {
         case userName = "ユーザーネーム"
         case email = "メールアドレス"
