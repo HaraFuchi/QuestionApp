@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryLabelAndTFTableViewCell: UITableViewCell {
+class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     var indexNumber: Int? //登録画面で繰り返すCellを分別する変数
     
@@ -18,9 +18,15 @@ class CategoryLabelAndTFTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
+        categoryTextField.delegate = self
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
