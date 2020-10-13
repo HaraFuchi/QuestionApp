@@ -28,6 +28,7 @@
 		E3396A3C24F8E31A0020AF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3396A3B24F8E31A0020AF8E /* Assets.xcassets */; };
 		E3396A3F24F8E31A0020AF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3396A3D24F8E31A0020AF8E /* LaunchScreen.storyboard */; };
 		E3431832251F139D0060B9EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E3431831251F139D0060B9EE /* GoogleService-Info.plist */; };
+		E3957EB42536114C004FF776 /* QuestionDataCrudModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3957EB32536114B004FF776 /* QuestionDataCrudModel.swift */; };
 		E3A32C222520626D00974EE9 /* AnonymousLoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A32C212520626D00974EE9 /* AnonymousLoginModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		E3396A3E24F8E31A0020AF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3396A4024F8E31A0020AF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3431831251F139D0060B9EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E3957EB32536114B004FF776 /* QuestionDataCrudModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionDataCrudModel.swift; sourceTree = "<group>"; };
 		E3A32C212520626D00974EE9 /* AnonymousLoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnonymousLoginModel.swift; sourceTree = "<group>"; };
 		F42C41B5328264FBA34588C0 /* Pods_QuestionApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A32C212520626D00974EE9 /* AnonymousLoginModel.swift */,
+				E3957EB32536114B004FF776 /* QuestionDataCrudModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				E30FEB4A250F386100B2F45B /* RegisterQuestionsViewController.swift in Sources */,
 				E30FEB51250F3CB700B2F45B /* LabelAndDatePickerTableViewCell.swift in Sources */,
 				E30FEB3825064FCB00B2F45B /* HomeViewController.swift in Sources */,
+				E3957EB42536114C004FF776 /* QuestionDataCrudModel.swift in Sources */,
 				E3A32C222520626D00974EE9 /* AnonymousLoginModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
