@@ -111,6 +111,8 @@ extension RegisterQuestionsViewController: CommonActionButtonTableViewCellDelega
         dismiss(animated: true, completion: nil)
     }
     func registerQuestionsButton() {
+        showRegisterAlert()
+        
         print(personString)
         print(contentsString)
         print(dateString)
@@ -136,5 +138,20 @@ extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelega
         case .nextAction: nextActionString = textField?.text
         case .none: break
         }
+    }
+}
+
+//MARK: - Method
+extension RegisterQuestionsViewController {
+    func showRegisterAlert() {
+        let alert = UIAlertController(title: "入力した内容を登録しますか？", message: "", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "登録する", style: .default) { (saveAction) in
+            //質問内容をデータベースに保存
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }
