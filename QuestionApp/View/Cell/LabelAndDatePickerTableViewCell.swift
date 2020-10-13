@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol LabelAndDatePickerTableViewCellDelegate {
+    //登録画面datePickerで選択した値を取得
+    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int)
+}
+
 class LabelAndDatePickerTableViewCell: UITableViewCell {
     
     var indexNumber: Int? //セルを区別するための変数
     var dateString: String?
+    var delegate: LabelAndDatePickerTableViewCellDelegate?
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -30,5 +36,6 @@ class LabelAndDatePickerTableViewCell: UITableViewCell {
         formatter.locale = Locale(identifier: "ja_JP")
         formatter.dateFormat = "yyyy年MM月dd日"
         dateString = formatter.string(from: datePicker.date)
+        delegate?.fetchQuestionsText(textField: nil, textView: nil, date: dateString, indexNumber: indexNumber!)
     }
 }

@@ -8,9 +8,16 @@
 
 import UIKit
 
+protocol CategoryLabelAndTFTableViewCellDelegate {
+    //登録画面でTFに入力した値を取得
+    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int)
+}
+
 class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
     
     var indexNumber: Int? //登録画面で繰り返すCellを分別する変数
+    var delegate: CategoryLabelAndTFTableViewCellDelegate?
+    
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryTextField: UITextField!
@@ -28,5 +35,9 @@ class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        delegate?.fetchQuestionsText(textField: textField, textView: nil, date: nil, indexNumber: indexNumber!)
     }
 }
