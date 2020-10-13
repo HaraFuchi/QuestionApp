@@ -140,7 +140,7 @@ extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelega
 extension RegisterQuestionsViewController {
     func showRegisterAlert() {
         let alert = UIAlertController(title: "入力した内容を登録しますか？", message: "", preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "登録する", style: .default) { (saveAction) in
+        let saveAction = UIAlertAction(title: "登録する", style: .default) { _ in
             let crudModel = QuestionDataCrudModel()
             crudModel.createQuestionsData(person: self.personString ?? "???", contents: self.contentsString ?? "???", date: self.dateString ?? "???", nextAction: self.nextActionString ?? "???")
             self.dismiss(animated: true, completion: nil)
