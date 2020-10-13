@@ -11,6 +11,7 @@ import UIKit
 class LabelAndDatePickerTableViewCell: UITableViewCell {
     
     var indexNumber: Int? //セルを区別するための変数
+    var dateString: String?
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -22,5 +23,12 @@ class LabelAndDatePickerTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction func didTapDatePicker(_ sender: UIDatePicker) {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ja_JP")
+        formatter.dateFormat = "yyyy年MM月dd日"
+        dateString = formatter.string(from: datePicker.date)
     }
 }
