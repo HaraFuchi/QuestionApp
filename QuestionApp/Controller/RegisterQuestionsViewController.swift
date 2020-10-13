@@ -67,17 +67,21 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         case 0:
             categoryCell.categoryLabel.text = QuestionList.person.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.person.QuestionPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
             return categoryCell
         case 1:
             questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
             questionTextViewCell.categoryTextView.text = "" //TextViewという文字が入るため
+            questionTextViewCell.indexNumber = indexPath.row
             return questionTextViewCell
         case 2:
             datePickerCell.categoryLabel.text = QuestionList.date.rawValue
+            datePickerCell.indexNumber = indexPath.row
             return datePickerCell
         case 3:
             categoryCell.categoryLabel.text = QuestionList.nextAction.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.nextAction.QuestionPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
             return categoryCell 
         case 4:
             commonActionButtonCell.delegate = self

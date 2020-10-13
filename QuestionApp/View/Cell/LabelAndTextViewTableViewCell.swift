@@ -10,6 +10,8 @@ import UIKit
 
 class LabelAndTextViewTableViewCell: UITableViewCell {
     
+    var indexNumber: Int? //セルを区別するための変数
+    
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryTextView: UITextView!
     

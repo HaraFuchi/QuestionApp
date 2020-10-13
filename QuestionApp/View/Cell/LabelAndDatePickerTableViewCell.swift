@@ -10,6 +10,8 @@ import UIKit
 
 class LabelAndDatePickerTableViewCell: UITableViewCell {
     
+    var indexNumber: Int? //セルを区別するための変数
+    
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var datePicker: UIDatePicker!
     
@@ -17,7 +19,7 @@ class LabelAndDatePickerTableViewCell: UITableViewCell {
         super.awakeFromNib()
         self.selectionStyle = .none
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
