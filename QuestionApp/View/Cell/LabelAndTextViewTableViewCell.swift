@@ -8,19 +8,32 @@
 
 import UIKit
 
-class LabelAndTextViewTableViewCell: UITableViewCell {
+protocol LabelAndTextViewTableViewCellDelegate {
+    //登録画面でTVに入力した値を取得
+    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int)
+}
+
+class LabelAndTextViewTableViewCell: UITableViewCell, UITextViewDelegate {
+    
+    var indexNumber: Int? //セルを区別するための変数
+    var delegate: LabelAndTextViewTableViewCellDelegate?
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var categoryTextView: UITextView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        categoryTextView.delegate = self
         self.selectionStyle = .none
         categoryTextViewDetail()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        delegate?.fetchQuestionsText(textField: nil, textView: textView, date: nil, indexNumber: indexNumber!)
     }
 }
 

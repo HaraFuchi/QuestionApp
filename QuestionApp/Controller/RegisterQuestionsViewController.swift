@@ -10,6 +10,12 @@ import UIKit
 
 class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, UINavigationBarDelegate {
     
+    //登録したい内容の値を保持
+    var personString: String?
+    var contentsString: String?
+    var dateString: String?
+    var nextActionString: String?
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     
@@ -63,21 +69,29 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         let datePickerCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndDatePickerCell", for: indexPath) as! LabelAndDatePickerTableViewCell
         let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath) as! CommonActionButtonTableViewCell
         
+        categoryCell.delegate = self
+        questionTextViewCell.delegate = self
+        datePickerCell.delegate = self
+        
         switch indexPath.row {
         case 0:
             categoryCell.categoryLabel.text = QuestionList.person.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.person.QuestionPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
             return categoryCell
         case 1:
             questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
             questionTextViewCell.categoryTextView.text = "" //TextViewという文字が入るため
+            questionTextViewCell.indexNumber = indexPath.row
             return questionTextViewCell
         case 2:
             datePickerCell.categoryLabel.text = QuestionList.date.rawValue
+            datePickerCell.indexNumber = indexPath.row
             return datePickerCell
         case 3:
             categoryCell.categoryLabel.text = QuestionList.nextAction.rawValue
             categoryCell.categoryTextField.placeholder = QuestionList.nextAction.QuestionPlaceHolderList
+            categoryCell.indexNumber = indexPath.row
             return categoryCell 
         case 4:
             commonActionButtonCell.delegate = self
@@ -91,10 +105,49 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
 }
 
 //MARK: - Protocol
+//ボタンを押した時のアクション
 extension RegisterQuestionsViewController: CommonActionButtonTableViewCellDelegate {
     func cancelButton() {
         dismiss(animated: true, completion: nil)
     }
     func registerQuestionsButton() {
+        showRegisterAlert()
+    }
+}
+
+//各セルで入力された値を取得する
+extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelegate, LabelAndTextViewTableViewCellDelegate, LabelAndDatePickerTableViewCellDelegate {
+    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int) {
+        enum CategoryNameText: Int {
+            case person
+            case contents
+            case date
+            case nextAction
+        }
+        
+        let questionsText = CategoryNameText(rawValue: indexNumber)
+        switch questionsText {
+        case .person: personString = textField?.text
+        case .contents: contentsString = textView?.text
+        case .date: dateString = date
+        case .nextAction: nextActionString = textField?.text
+        case .none: break
+        }
+    }
+}
+
+//MARK: - Method
+extension RegisterQuestionsViewController {
+    func showRegisterAlert() {
+        let alert = UIAlertController(title: "入力した内容を登録しますか？", message: "", preferredStyle: .alert)
+        let saveAction = UIAlertAction(title: "登録する", style: .default) { _ in
+            let crudModel = QuestionDataCrudModel()
+            crudModel.createQuestionsData(person: self.personString ?? "???", contents: self.contentsString ?? "???", date: self.dateString ?? "???", nextAction: self.nextActionString ?? "???")
+            self.dismiss(animated: true, completion: nil)
+        }
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
     }
 }
