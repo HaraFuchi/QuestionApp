@@ -12,8 +12,8 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     
     //登録したい内容の値を保持
     var personString: String?
-    var contentsString: String?
     var dateString: String?
+    var contentsString: String?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -30,14 +30,14 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     
     enum QuestionList: String, CaseIterable{
         case person = "質問する相手"
-        case question = "質問内容"
         case date = "会う予定の日"
+        case question = "質問内容"
         
         var QuestionPlaceHolderList: String {
             switch self {
             case .person: return "例)田中 太郎"
-            case .question: return "例)食事制限をしないダイエット方法"
             case .date: return "例)2021/01/01"
+            case .question: return "例)食事制限をしないダイエット方法"
             }
         }
     }
@@ -47,12 +47,12 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         tableView.dataSource = self
         navigationBar.delegate = self
         let categoryNib = UINib(nibName: "CategoryLabelAndTFTableViewCell", bundle: nil)
-        let questionTextViewNib = UINib(nibName: "LabelAndTextViewTableViewCell", bundle: nil)
         let datePickerNib = UINib(nibName: "LabelAndDatePickerTableViewCell", bundle: nil)
+        let questionTextViewNib = UINib(nibName: "LabelAndTextViewTableViewCell", bundle: nil)
         let commonActionButtonNib = UINib(nibName: "CommonActionButtonTableViewCell", bundle: nil)
         tableView.register(categoryNib, forCellReuseIdentifier: "CategoryCell")
-        tableView.register(questionTextViewNib, forCellReuseIdentifier: "LabelAndTextViewCell")
         tableView.register(datePickerNib, forCellReuseIdentifier: "LabelAndDatePickerCell")
+        tableView.register(questionTextViewNib, forCellReuseIdentifier: "LabelAndTextViewCell")
         tableView.register(commonActionButtonNib, forCellReuseIdentifier: "CommonActionButtonCell")
     }
     
@@ -62,13 +62,13 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let categoryCell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryLabelAndTFTableViewCell
-        let questionTextViewCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndTextViewCell", for: indexPath) as! LabelAndTextViewTableViewCell
         let datePickerCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndDatePickerCell", for: indexPath) as! LabelAndDatePickerTableViewCell
+        let questionTextViewCell = tableView.dequeueReusableCell(withIdentifier: "LabelAndTextViewCell", for: indexPath) as! LabelAndTextViewTableViewCell
         let commonActionButtonCell = tableView.dequeueReusableCell(withIdentifier: "CommonActionButtonCell", for: indexPath) as! CommonActionButtonTableViewCell
         
         categoryCell.delegate = self
-        questionTextViewCell.delegate = self
         datePickerCell.delegate = self
+        questionTextViewCell.delegate = self
         
         switch indexPath.row {
         case 0:
@@ -77,14 +77,14 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
             categoryCell.indexNumber = indexPath.row
             return categoryCell
         case 1:
+            datePickerCell.categoryLabel.text = QuestionList.date.rawValue
+            datePickerCell.indexNumber = indexPath.row
+            return datePickerCell
+        case 2:
             questionTextViewCell.categoryLabel.text = QuestionList.question.rawValue
             questionTextViewCell.categoryTextView.text = "" //TextViewという文字が入るため
             questionTextViewCell.indexNumber = indexPath.row
             return questionTextViewCell
-        case 2:
-            datePickerCell.categoryLabel.text = QuestionList.date.rawValue
-            datePickerCell.indexNumber = indexPath.row
-            return datePickerCell
         case 3:
             commonActionButtonCell.delegate = self
             commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
@@ -108,19 +108,19 @@ extension RegisterQuestionsViewController: CommonActionButtonTableViewCellDelega
 }
 
 //各セルで入力された値を取得する
-extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelegate, LabelAndTextViewTableViewCellDelegate, LabelAndDatePickerTableViewCellDelegate {
-    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int) {
+extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelegate, LabelAndDatePickerTableViewCellDelegate, LabelAndTextViewTableViewCellDelegate {
+    func fetchQuestionsText(textField: UITextField?, date: String?, textView: UITextView?, indexNumber: Int) {
         enum CategoryNameText: Int {
             case person
-            case contents
             case date
+            case contents
         }
         
         let questionsText = CategoryNameText(rawValue: indexNumber)
         switch questionsText {
         case .person: personString = textField?.text
-        case .contents: contentsString = textView?.text
         case .date: dateString = date
+        case .contents: contentsString = textView?.text
         case .none: break
         }
     }
@@ -132,7 +132,7 @@ extension RegisterQuestionsViewController {
         let alert = UIAlertController(title: "入力した内容を登録しますか？", message: "", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "登録する", style: .default) { _ in
             let crudModel = QuestionDataCrudModel()
-            crudModel.createQuestionsData(person: self.personString ?? "???", contents: self.contentsString ?? "???", date: self.dateString ?? "???")
+            crudModel.createQuestionsData(person: self.personString ?? "???", date: self.dateString ?? "???", contents: self.contentsString ?? "???")
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)

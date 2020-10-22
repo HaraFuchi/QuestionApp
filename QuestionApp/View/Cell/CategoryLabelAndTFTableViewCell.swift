@@ -10,7 +10,7 @@ import UIKit
 
 protocol CategoryLabelAndTFTableViewCellDelegate {
     //登録画面でTFに入力した値を取得
-    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int)
+    func fetchQuestionsText(textField: UITextField?, date: String?, textView: UITextView?, indexNumber: Int)
 }
 
 class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
@@ -38,6 +38,6 @@ class CategoryLabelAndTFTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        delegate?.fetchQuestionsText(textField: textField, textView: nil, date: nil, indexNumber: indexNumber!)
+        delegate?.fetchQuestionsText(textField: textField, date: nil, textView: nil, indexNumber: indexNumber!)
     }
 }

@@ -10,7 +10,7 @@ import UIKit
 
 protocol LabelAndTextViewTableViewCellDelegate {
     //登録画面でTVに入力した値を取得
-    func fetchQuestionsText(textField: UITextField?, textView: UITextView?, date: String?, indexNumber: Int)
+    func fetchQuestionsText(textField: UITextField?, date: String?, textView: UITextView?, indexNumber: Int)
 }
 
 class LabelAndTextViewTableViewCell: UITableViewCell, UITextViewDelegate {
@@ -33,7 +33,7 @@ class LabelAndTextViewTableViewCell: UITableViewCell, UITextViewDelegate {
     }
     
     func textViewDidEndEditing(_ textView: UITextView) {
-        delegate?.fetchQuestionsText(textField: nil, textView: textView, date: nil, indexNumber: indexNumber!)
+        delegate?.fetchQuestionsText(textField: nil, date: nil, textView: textView, indexNumber: indexNumber!)
     }
 }
 
