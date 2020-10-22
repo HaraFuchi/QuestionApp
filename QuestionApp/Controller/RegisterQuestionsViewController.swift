@@ -14,7 +14,6 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
     var personString: String?
     var contentsString: String?
     var dateString: String?
-    var nextActionString: String?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationBar!
@@ -33,14 +32,12 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         case person = "質問する相手"
         case question = "質問内容"
         case date = "会う予定の日"
-        case nextAction = "次のアクション"
         
         var QuestionPlaceHolderList: String {
             switch self {
             case .person: return "例)田中 太郎"
             case .question: return "例)食事制限をしないダイエット方法"
             case .date: return "例)2021/01/01"
-            case .nextAction: return "例)教えてもらったダイエット方法を１ヶ月続ける"
             }
         }
     }
@@ -89,11 +86,6 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
             datePickerCell.indexNumber = indexPath.row
             return datePickerCell
         case 3:
-            categoryCell.categoryLabel.text = QuestionList.nextAction.rawValue
-            categoryCell.categoryTextField.placeholder = QuestionList.nextAction.QuestionPlaceHolderList
-            categoryCell.indexNumber = indexPath.row
-            return categoryCell 
-        case 4:
             commonActionButtonCell.delegate = self
             commonActionButtonCell.leftSideButton.setTitle("キャンセル", for: .normal)
             commonActionButtonCell.rightSideButton.setTitle("質問を登録", for: .normal)
@@ -122,7 +114,6 @@ extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelega
             case person
             case contents
             case date
-            case nextAction
         }
         
         let questionsText = CategoryNameText(rawValue: indexNumber)
@@ -130,7 +121,6 @@ extension RegisterQuestionsViewController: CategoryLabelAndTFTableViewCellDelega
         case .person: personString = textField?.text
         case .contents: contentsString = textView?.text
         case .date: dateString = date
-        case .nextAction: nextActionString = textField?.text
         case .none: break
         }
     }
@@ -142,7 +132,7 @@ extension RegisterQuestionsViewController {
         let alert = UIAlertController(title: "入力した内容を登録しますか？", message: "", preferredStyle: .alert)
         let saveAction = UIAlertAction(title: "登録する", style: .default) { _ in
             let crudModel = QuestionDataCrudModel()
-            crudModel.createQuestionsData(person: self.personString ?? "???", contents: self.contentsString ?? "???", date: self.dateString ?? "???", nextAction: self.nextActionString ?? "???")
+            crudModel.createQuestionsData(person: self.personString ?? "???", contents: self.contentsString ?? "???", date: self.dateString ?? "???")
             self.dismiss(animated: true, completion: nil)
         }
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
