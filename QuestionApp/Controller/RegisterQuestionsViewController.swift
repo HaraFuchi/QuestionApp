@@ -32,12 +32,14 @@ class RegisterQuestionsViewController: UIViewController, UITableViewDataSource, 
         case person = "質問する相手"
         case date = "会う予定の日"
         case question = "質問内容"
+        case nextAction = "次のアクション"
         
         var QuestionPlaceHolderList: String {
             switch self {
             case .person: return "例)田中 太郎"
             case .date: return "例)2021/01/01"
             case .question: return "例)食事制限をしないダイエット方法"
+            case . nextAction: return "例)教えてもらったダイエット方法を１ヶ月続ける"
             }
         }
     }
